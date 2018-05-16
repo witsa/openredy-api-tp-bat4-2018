@@ -87,6 +87,81 @@ Accéder au [service](http://localhost:1880) node-red
 
 Un [exemple](http://openredy-demo.westeurope.cloudapp.azure.com:12255/#flow/10154d.e4c79ab3) d'implémentation de la partie `1.` est disponible.
 
+Exemple de flow node-red : 
+
+```json
+[
+    {
+        "id": "fff30962.c951b8",
+        "type": "inject",
+        "z": "f061a2c.e59f86",
+        "name": "",
+        "topic": "",
+        "payload": "{\"payload\":{\"p\":\":easy.RESS.R00001.R00003.SetPoint\",\"v\":\"2\"},\"headers\":{\"content-type\":\"application/x-www-form-urlencoded\"}}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "38727c03.6df3c4"
+            ]
+        ]
+    },
+    {
+        "id": "cbb01859.1b5e88",
+        "type": "http request",
+        "z": "f061a2c.e59f86",
+        "name": "",
+        "method": "PUT",
+        "ret": "obj",
+        "url": "http://openredy-demo.westeurope.cloudapp.azure.com/web/api/v1/wos/put",
+        "tls": "",
+        "x": 650,
+        "y": 260,
+        "wires": [
+            [
+                "f9f9f89c.5570b8"
+            ]
+        ]
+    },
+    {
+        "id": "f9f9f89c.5570b8",
+        "type": "debug",
+        "z": "f061a2c.e59f86",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "38727c03.6df3c4",
+        "type": "function",
+        "z": "f061a2c.e59f86",
+        "name": "",
+        "func": "\nreturn {\"payload\":{\"p\":\":easy.RESS.R00001.R00003.SetPoint\",\"v\":\"2\"},\"headers\":{\"content-type\":\"application/x-www-form-urlencoded\"}};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "cbb01859.1b5e88"
+            ]
+        ]
+    }
+]
+```
+
+
 Autres possibilités
 ----
 
