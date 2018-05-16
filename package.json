@@ -1,0 +1,29 @@
+{
+  "name": "openredy-api-tp-bat4-2018",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-red"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/witsa/openredy-api-tp-bat4-2018.git"
+  },
+  "keywords": [
+    "WIT",
+    "REDY",
+    "OPENREDY",
+    "API",
+    "TP",
+    "POLYTECH'NICE SOPHIA",
+    "Ingénieur Bâtiments durables et intelligents",
+    ""
+  ],
+  "author": "pascal.tonin@wit.fr",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/witsa/openredy-api-tp-bat4-2018/issues"
+  },
+  "homepage": "https://github.com/witsa/openredy-api-tp-bat4-2018#readme"
+}
