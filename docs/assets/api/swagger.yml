@@ -3,8 +3,7 @@ info:
   title: OpenREDY WOS Api
   x-logo:
     url: '../images/openredy_logo.svg'
-  description: |
-  version: 1.0
+  version: "1.0"
 x-tagGroups:
   - name: API Operations
     tags:
@@ -632,7 +631,7 @@ paths:
       security:
         - basicAuth: []
         - oauthPasswordAuth: []
-    /easy/RIA/Grph/GetItemSchemas:
+  /easy/RIA/Grph/GetItemSchemas:
     get:
       operationId: grphGetItemSchemas
       summary: Get historical metadatas
@@ -905,7 +904,6 @@ definitions:
             example: 1974441
           t: 
             type: string
-            deprecated: true
             description: |
               t[itle] -> title / hint text active which can be displayed with the image  
               **_Will be removed in the next version, replaced with `h` property field on nod object_**
